@@ -1,0 +1,59 @@
+{
+  // Editor settings
+  "editor.gotoLocation.multipleDefinitions": "goto",
+  "editor.gotoLocation.multipleReferences": "gotoAndPeek",
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[elixir]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "elixir-lsp.elixir-ls"
+  },
+  "[phoenix-heex]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "elixir-lsp.elixir-ls"
+  },
+
+  "files.associations": {
+    "*.ex": "elixir",
+    "*.exs": "elixir",
+    "*.eex": "elixir",
+    "*.heex": "phoenix-heex",
+    "*.leex": "phoenix-leex"
+    //"*.sface": "phoenix-sface",
+    //"*.leex": "phoenix-leex",
+  },
+
+  // Diff editor settings
+  "diffEditor.ignoreTrimWhitespace": false,
+
+  // Git settings
+  "git.autofetch": true,
+  "git.blame.editorDecoration.enabled": true,
+  "git.confirmSync": false,
+
+  // ElixirLS settings
+  "elixirLS.dialyzerEnabled": true,
+  "elixirLS.fetchDeps": false,
+  "elixirLS.mixEnv": "dev",
+  "elixirLS.enableTestLenses": true,
+  "elixirLS.suggestSpecs": true,
+  //"elixirLS.suggestExUnit": true,
+  //"elixirLS.suggestExUnitTags": true,
+  //"elixirLS.suggestExUnitSkip": true,
+  //"elixirLS.suggestExUnitDocString": true,
+  //"elixirLS.suggestExUnitAssertions": true,
+  //"elixirLS.suggestExUnitAssertionsTags": true,
+  //"elixirLS.suggestExUnitAssertionsSkip": true,
+  //"elixirLS.suggestExUnitAssertionsDocString": true,
+  "elixirLS.trace.server": "messages",
+  "elixirLS.autoInsertRequiredAlias": true,
+  "elixirLS.signatureAfterComplete": false,
+
+  "emmet.includeLanguages": {
+    "phoenix-heex": "html",
+    "elixir": "html"
+  },
+
+  // Makefile settings
+  "makefile.configureOnOpen": true
+}
