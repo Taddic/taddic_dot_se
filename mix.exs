@@ -28,7 +28,7 @@ defmodule TaddicDotSe.MixProject do
 
   def cli do
     [
-      preferred_envs: [precommit: :test]
+      preferred_envs: [dev_precommit: :test, dev_prepush: :test]
     ]
   end
 
@@ -76,7 +76,7 @@ defmodule TaddicDotSe.MixProject do
   # See the documentation for `Mix` for more info on aliases.
   defp aliases do
     [
-      setup: [
+      dev_setup: [
         "deps.get",
         "assets.setup",
         "assets.build"
@@ -95,13 +95,16 @@ defmodule TaddicDotSe.MixProject do
         "esbuild taddic_dot_se --minify",
         "phx.digest"
       ],
-      precommit: [
+      dev_precommit: [
         "compile --warnings-as-errors",
         "deps.unlock --unused",
-        "format",
+        "format"
+      ],
+      dev_prepush: [
+        "dev_precommit",
         "test"
       ],
-      prod: [
+      prod_build: [
         "deps.get --only prod",
         "tailwind.install",
         "esbuild.install",
